@@ -31,6 +31,10 @@ bun run lint      # Check code
 bun run format    # Format code
 ```
 
+## Project Management
+
+Uses [Linear](https://linear.app) for issue tracking. Create a new Project in the "Projects" team for each app built from this template.
+
 ## AI-Assisted Development
 
 See [CLAUDE.md](./CLAUDE.md) for guidance when using Claude Code. Update it as the project evolves.

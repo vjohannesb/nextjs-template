@@ -50,3 +50,18 @@ Components are generated locally in `src/components/ui/`, not installed as npm p
 ## Code Quality
 
 Uses Biome (not ESLint/Prettier) for linting and formatting. Configuration in `biome.json`.
+
+## Project Management (Linear)
+
+This project uses Linear for issue tracking via MCP integration.
+
+**Workflow:**
+1. Create a new Project in the "Projects" team for each app built from this template
+2. Create issues within that project to track features, bugs, and tasks
+3. Update issue status as work progresses
+
+**Common Linear operations:**
+- `mcp__linear-server__create_project` - Create a project in team "Projects"
+- `mcp__linear-server__create_issue` - Create issues with `team: "Projects"` and `project: "<project-name>"`
+- `mcp__linear-server__update_issue` - Update issue status, assignee, etc.
+- `mcp__linear-server__list_issues` - List issues for a project
