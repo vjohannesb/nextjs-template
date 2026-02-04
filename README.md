@@ -1,40 +1,28 @@
 # Next.js Template
 
-A starter template for rapid web app development.
+A starter template for rapid web app development with Claude Code.
 
 ## Stack
 
 - **Framework:** Next.js 16 (App Router)
 - **Language:** TypeScript
-- **Styling:** Tailwind CSS v4
-- **Components:** shadcn/ui (60+ pre-generated components)
+- **Styling:** Tailwind CSS v4 + shadcn/ui
 - **Forms:** react-hook-form + zod
-- **Package Manager:** Bun
+- **Runtime:** Bun
 - **Linting:** Biome
+- **Project Management:** Linear
 
-## Getting Started
+## Quick Start
 
 ```bash
 bun install
 bun run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to view the app.
+## Using This Template
 
-## Scripts
+1. Clone/use this template for your new project
+2. Open Claude Code and describe what you want to build
+3. Claude will initialize the project, create Linear issues, and start building
 
-```bash
-bun run dev       # Development server
-bun run build     # Production build
-bun run start     # Start production server
-bun run lint      # Check code
-bun run format    # Format code
-```
-
-## Project Management
-
-Uses [Linear](https://linear.app) for issue tracking. Create a new Project in the "Projects" team for each app built from this template.
-
-## AI-Assisted Development
-
-See [CLAUDE.md](./CLAUDE.md) for guidance when using Claude Code. Update it as the project evolves.
+See [CLAUDE.md](./CLAUDE.md) for AI agent instructions.

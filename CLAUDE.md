@@ -2,7 +2,42 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-**This is a template starter repository.** Update this file as you add features, change architecture, or establish new patterns.
+## Project Initialization (READ THIS FIRST)
+
+**If the README title is "Next.js Template", this repo needs initialization.**
+
+When the user describes what they want to build:
+
+1. **Create a project name** - Short, memorable, kebab-case (e.g., "gym-tracker", "recipe-vault")
+2. **Update these files immediately:**
+   - `README.md` - Change title and description to match the project
+   - `package.json` - Update the `name` field
+   - `src/app/layout.tsx` - Update metadata `title` and `description`
+3. **Create Linear project** - Use `mcp__linear-server__create_project` with:
+   - `name`: The project name (title case, e.g., "Gym Tracker")
+   - `team`: "Projects"
+   - `description`: Brief description of what we're building
+4. **Create initial Linear issues** - Use `mcp__linear-server__create_issue` for each:
+   - Assign to `"me"`
+   - Set appropriate `priority` (1=Urgent, 2=High, 3=Normal, 4=Low)
+   - Add to the project you just created
+   - Break down the user's request into actionable issues
+5. **Update this CLAUDE.md** - Add a "Project Status" section below with:
+   - What the project is
+   - Key decisions made
+   - Current state
+
+6. **Commit the initialization** - Single commit with all the setup changes
+
+Then proceed to plan and build. Be proactive—make reasonable assumptions and move fast. Only ask questions for critical decisions that significantly impact architecture.
+
+---
+
+## Project Status
+
+*Not yet initialized. Awaiting project description.*
+
+---
 
 ## Build & Development Commands
 
@@ -51,17 +86,18 @@ Components are generated locally in `src/components/ui/`, not installed as npm p
 
 Uses Biome (not ESLint/Prettier) for linting and formatting. Configuration in `biome.json`.
 
-## Project Management (Linear)
+## Linear Integration
 
-This project uses Linear for issue tracking via MCP integration.
+**Team:** Projects
+**Workflow:** Each project gets its own Linear Project with issues tracking features, bugs, and tasks.
 
-**Workflow:**
-1. Create a new Project in the "Projects" team for each app built from this template
-2. Create issues within that project to track features, bugs, and tasks
-3. Update issue status as work progresses
+**During development:**
+- Update issue status to "In Progress" when starting work
+- Mark issues "Done" when complete
+- Create new issues as scope expands or new tasks emerge
+- Keep issues granular and actionable
 
-**Common Linear operations:**
-- `mcp__linear-server__create_project` - Create a project in team "Projects"
-- `mcp__linear-server__create_issue` - Create issues with `team: "Projects"` and `project: "<project-name>"`
-- `mcp__linear-server__update_issue` - Update issue status, assignee, etc.
-- `mcp__linear-server__list_issues` - List issues for a project
+Common operations:
+- `mcp__linear-server__list_issues` - Check current issues (use `project` filter)
+- `mcp__linear-server__update_issue` - Update status as work completes
+- `mcp__linear-server__create_issue` - Add new issues as scope expands
